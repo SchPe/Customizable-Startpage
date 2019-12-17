@@ -1,0 +1,390 @@
+
+
+@supports (display: grid) {
+  .github-container { 
+    display: grid;  
+    grid-column-gap: 1.2em; 
+    grid-row-gap: 0.5em;
+    grid-template-columns: minmax(224px, 1fr) 1.5fr; 
+  }
+}
+
+.github-container {  
+  overflow:hidden;
+  min-height: 0;
+  max-height: 20%;
+  max-width:100%;
+} 
+
+
+.mark-as-read {
+  padding-top:0.8em;
+}
+
+.fa-check {
+  color: green;
+}
+
+.githubBody {
+  min-width: 0;
+  min-height: 0;
+}
+
+.lg .githubBody {
+  display:block;
+}
+
+.sm .githubBody {
+  display:none;
+}
+
+.github-container .badge-container {
+  margin-right:0.3em;
+  margin-bottom:0.3em;
+  max-width: 100%;
+  overflow:hidden;
+  
+}
+
+.github-badges {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.repo-badge {
+  max-width: 100%;
+}
+
+
+@supports (display: grid) {
+  .reddit-container { 
+    display: grid;
+    grid-template-columns: 2.5em 1fr; 
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+  }
+}
+.reddit-container { 
+  overflow:hidden;
+  min-height: 0;
+  max-height: 20%;
+  max-width:100%;
+
+}  
+
+
+
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.img-link {
+  max-width:50%;
+  max-height:100%;
+  margin-right:0.3em;
+}
+
+
+
+.img-link img {
+  max-width:100%;
+  max-height:100%;
+}
+
+
+
+.isolated {
+  display:block;
+  padding-top:0.3em;
+  word-break: break-all;
+  
+}
+
+.reddit-container .media-body .reddit-body a {
+  word-break: break-all;
+}
+
+
+.badge-container {
+  width: 2,5em;
+  overflow:visible;
+}
+
+
+.media.reddit {
+  height: 100%;
+  max-width: 100%;
+}
+.media-body.reddit {
+  height:100%;
+  max-width: 100%;
+  overflow:hidden;
+}
+
+
+
+#basic-addon2 {
+  width: 6rem;
+}
+
+#redditEntry {
+  width: 100%;
+}
+
+
+.add-button {
+    cursor: pointer;
+    position:relative;
+}
+
+
+.icon-home3:before {
+  content: "\e902";
+}
+
+.generated {
+  border: solid 1px blue;
+}
+
+html {
+  height: 100%
+}
+
+body {
+  height: 100%;
+  background-image:url(../images/news8.png);
+}
+
+
+
+
+
+.card .card-header .card-title {
+  text-shadow: 0px 1px 0px white; 
+}
+
+
+
+.close-button {
+  padding: 0.1rem;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5rem;
+  cursor: pointer;
+
+  color:#888;
+  font-size:1.5rem;
+}
+
+
+
+#add {
+  margin: 0.5rem;
+  border: 1px solid rgb(47, 60, 72);
+  background-color: rgba(47, 60, 72, 0);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#add:hover {
+  background-color: rgba(47, 60, 72, 1);
+}
+
+
+.tab-content {
+  padding: 0.3rem;
+}
+
+
+
+.entriesCounter {
+  width:10em;
+  display: block;
+  
+}
+
+.entriesCounter input  {
+  width: 4em;
+}
+
+
+
+.icon-warning {
+  color: red;
+}
+
+
+
+.markAsReadAnchor:hover, .markAsReadAnchor:focus, .markAsReadAnchor:link, .markAsReadAnchor:visited, .markAsReadAnchor:active {
+  text-decoration: none !important;
+}
+.markAsReadAnchor:hover .markAsReadText {
+  text-decoration: underline;
+}
+.icon-checkmark {
+  color:green;
+}
+
+#add:hover .plusSVG {
+  filter: url(#id-of-your-filter);
+}
+
+
+
+.modal-signup {
+  color: #636363;
+  width: 350px;
+}
+.modal-signup .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.modal-signup .modal-header {
+  border-bottom: none;
+  position: relative;
+  justify-content: center;
+}
+.modal-signup h4 {
+  text-align: center;
+}
+.modal-signup  .form-group {
+  position: relative;
+}
+
+.modal-signup .form-control:focus {
+  border-color: #00ce81;
+}
+.modal-signup .form-control, .modal-signup .btn {
+  min-height: 40px;
+  border-radius: 3px; 
+}
+.modal-signup .hint-text {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.modal-signup .btn {
+  border: none;
+  line-height: normal;
+}
+
+.modal-signup .modal-footer {
+  background: #ecf0f1;
+  border-color: #dee4e7;
+  text-align: center;
+  margin: 0 -20px -20px;
+  border-radius: 5px;
+  justify-content: center;
+}
+.modal-signup .modal-footer a {
+  color: #999;
+}
+.modal-signup .trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+
+
+
+
+.modal-login {
+  color: #636363;
+  width: 350px;
+}
+.modal-login .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.modal-login .modal-header {
+  border-bottom: none;
+  position: relative;
+  justify-content: center;
+}
+.modal-login h4 {
+  text-align: center;
+}
+.modal-login  .form-group {
+  position: relative;
+}
+
+.modal-login .form-control:focus {
+  border-color: #00ce81;
+}
+.modal-login .form-control, .modal-login .btn {
+  min-height: 40px;
+  border-radius: 3px; 
+}
+.modal-login .hint-text {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.modal-login .btn {
+  border: none;
+  line-height: normal;
+}
+
+.modal-login .modal-footer {
+  background: #ecf0f1;
+  border-color: #dee4e7;
+  text-align: center;
+  margin: 0 -20px -20px;
+  border-radius: 5px;
+  justify-content: center;
+}
+.modal-login .modal-footer a {
+  color: #999;
+}
+.modal-login .trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+
+.feedback-message {
+  display: none;
+  color: red;
+  text-align: center;
+}
+
+
+.secondary .card {
+  min-width: 18rem;
+  position: absolute;
+  top: 6rem;
+  box-shadow: 0 2px 4px 0 rgba(181,181,181,.7);
+  border-top-color: rgb(48, 48, 67);
+  border-top: 1px solid #f1f1f5;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.secondary .card-title {
+  margin-bottom: 0;
+}
+
+.secondary .desktopSecondary .card{
+  top: 8rem;
+}
+
+
+.secondary .navbar-brand img{
+  height: 2.6em;
+}
+.secondary .desktopSecondary .navbar-brand img{
+  height: 3.3em;
+}
+
+.secondary h4 {
+  text-align: center;
+}

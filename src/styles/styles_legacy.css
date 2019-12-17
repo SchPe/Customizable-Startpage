@@ -1,0 +1,168 @@
+
+.ie11 .card .card-footer:after {
+    position:absolute;
+    right:0;
+    bottom:-0.5em;
+    font-size:1.5em;
+    font-weight: 700;
+    content: "↘";
+  }
+  
+
+
+@supports not (display: grid) {
+    .github-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      }
+      
+      .github-container .githubInfo {
+      margin: 10px;    
+      width: calc((100% / 2) - 20px);
+      }
+      
+      .github-container .githubBody {
+      margin: 10px;   
+      width: calc((100% / 2) - 20px);
+      }
+      
+      .github-container .githubInfo.no-body {
+      margin: 10px;    
+      width: 100%;
+      }
+      
+  }
+  
+  .ie11 .github-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+  
+  .ie11 .github-container .githubInfo {
+  margin: 10px;    
+  width: calc((100% / 2) - 20px);
+  }
+  
+  .ie11 .github-container .githubBody {
+  margin: 10px;   
+  width: calc((100% / 2) - 20px);
+  }
+  
+  .ie11 .github-container .githubInfo.no-body {
+  margin: 10px;    
+  width: 100%;
+  }
+
+
+  @supports not (display: grid) {
+    .reddit-container .media {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+      
+    .reddit-container .media .redditImg {
+      margin: 10px;    
+      width: calc((100% / 2) - 20px);
+    }
+    
+    .reddit-container .media .media-body {
+      margin: 10px;    
+      width: calc((100% / 2) - 20px);
+    }
+    
+    .reddit-container .media .media-body.no-image {
+      margin: 10px;
+      width: 100%;
+    }
+    
+    .reddit-container .media .redditImg.no-image {
+      margin:0px;   
+      width: 0px;
+    }
+  }
+  
+  .ie11 .reddit-container .media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+    
+  .ie11 .reddit-container .media .redditImg {
+    margin: 10px;    
+    width: calc((100% / 2) - 20px);
+  }
+  
+  .ie11 .reddit-container .media .media-body {
+    margin: 10px;    
+    width: calc((100% / 2) - 20px);
+  }
+  
+  .ie11 .reddit-container .media .media-body.no-image {
+    margin: 10px;
+    width: 100%;
+  }
+  
+  .ie11 .reddit-container .media .redditImg.no-image {
+    margin:0px;   
+    width: 0px;
+  }
+
+
+  @supports not (display: grid) {
+    .news.media {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+    .news.media .newsImg {
+      margin: 10px;   
+      width: calc((100% / 2) - 20px);
+    }
+    
+    .news.media .media-body {
+        margin: 10px;    
+        width: calc((100% / 2) - 20px);
+    }
+    
+    .news.media .newsImg.no-image {
+      width:0px;
+      margin: 0px;
+    }
+    .news.media .media-body.no-image {
+      margin: 10px;
+      width:100%;
+    }
+  
+  }
+  
+  
+  .ie11 .news.media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .ie11 .news.media .newsImg {
+    margin: 10px;   
+    width: calc((100% / 2) - 20px);
+  }
+  
+  .ie11 .news.media .media-body {
+      margin: 10px;    
+      width: calc((100% / 2) - 20px);
+  }
+  
+  .ie11 .news.media .newsImg.no-image {
+    width:0px;
+    margin: 0px;
+  }
+  .ie11 .news.media .media-body.no-image {
+    margin: 10px;
+    width:100%;
+  }
+  
+  

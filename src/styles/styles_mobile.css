@@ -1,0 +1,97 @@
+
+.smartphone .navbar-brand img {
+  height: 2.6em;
+}
+
+.smartphone {
+  font-size: 44px;
+}
+
+.smartphone .modal {
+  width: 100%;
+  margin: auto;
+  padding:0;
+}
+.smartphone .modal-dialog {
+  width: 100%;
+  margin: auto;
+  padding:0;
+  height: auto;
+  max-height: 100vh;
+}
+
+.smartphone .modal-dialog {
+  height: auto;
+}
+
+.smartphone .modal-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.smartphone .card-body.iframeBody {
+  height: auto;
+  overflow:hidden;
+  padding: 0;
+}
+
+
+
+
+.smartphone .card-body.iframeBody iframe {
+  box-sizing:border-box;
+  width:100%;
+  height: 3000px;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+.smartphone .card {
+  overflow: visible;
+}
+.smartphone .card .card-header{
+  position:sticky;
+  top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.smartphone .card-header h2 {
+  top:0;
+  display: flex;
+}
+
+.smartphone #container .card .card-header .card-title {
+  text-overflow: ellipsis;
+  overflow:hidden;
+  white-space: nowrap;
+  text-align: left;
+  margin: 0;
+}
+
+.smartphone #container .card .card-header h2 .card-title-plus::before {
+  content: '+     ';
+}
+.smartphone #container .card .card-header h2 .card-title-minus::before {
+  content: '−     ';
+}
+.smartphone #container .card .card-header h2 .plmn-toggle{
+  padding-left: 0.6rem;
+}
+
+
+.smartphone #container .card .card-body {
+  max-height: none;
+}
+
+
+
+.smartphone #news .dropdown.bootstrap-select {
+  width: 11rem;
+}
+
+
+

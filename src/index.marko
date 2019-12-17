@@ -1,0 +1,213 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Startpage</title>
+  <meta name="description" content="Startpage">
+  <meta name="author" content="SitePoint">
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+  #nav {
+    display: none;
+  } 
+</style>
+
+</head>
+
+<body id='body'>
+
+      <nav id="nav" style="justify-content: space-between;flex-wrap: wrap;" class="navbar navbar-expand-lg navbar-light bg-light"> 
+        <button style="position:relative;height:3.5em;width:3.5em;flex-shrink:0;" id="add" class="un" data-toggle="modal" data-target="#exampleModal">
+          <svg style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 448 512">
+            <defs>
+              <filter id="id-of-your-filter">
+                <feColorMatrix
+                color-interpolation-filters="sRGB"
+                type="matrix"
+                values="0 0 0 0 1
+                                0 0 0 0 1
+                                0 0 0 0 1
+                                0 0 0 1 0 "/>
+              </filter>
+            </defs>
+            <path class="plusSVG" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" fill="#2f3c48"/>
+          </svg>
+        </button>
+        <a class="navbar-brand order-lg-0" href="#">
+          <img src="images/brand.png" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div style="flex-grow: 0; width:max-content;" class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="homescreenBtn"><span class="icon-home3"></span> Add to home screen</a>
+              </li>
+         $!{data.nav_content}
+        </ul>
+        </div>
+    </nav>
+
+    <if (data.data)>
+      <div id="data" style = "display: none;">${data.data}</div>
+    </if>
+    <if (data.idtoken)>
+      <div id="idToken" style = "display: none;">${data.idtoken}</div>
+    </if>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create new content</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#reddit" role="tab">Reddit</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#news" role="tab">News</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#github" role="tab">Github</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#website" role="tab">Any Website</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="reddit" role="tabpanel">
+                <label for="basic-url">Enter subreddit or leave blank for reddit mainpage</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://www.reddit.com/</span>
+                  </div>
+                  <input type="text" class="form-control" id="subreddit" placeholder="r/subreddit">
+                </div>
+                <div class="entriesCounter">
+                  <label for="basic-url">Number of threads:</label>
+                  <input id="redditEntries" placeholder="Enter a number" value="10" required type="number"  min="1" max="30"/>
+                </div>
+                <div id="redditWrongInput" class="mt-4 p-0 alert alert-danger d-none" style="max-width:max-content;"><span class="icon-warning"></span>&nbsp;Invalid Subreddit format, try something like r/environment</div>
+                <div id="redditWrongCounterInput" class="mt-4 p-0 alert alert-danger d-none" style="max-width:max-content;"><span class="icon-warning"></span>&nbsp;Please enter a number for number of threads</div>
+
+              </div>
+              <div class="tab-pane fade" id="news"  role="tabpanel">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-xl-6">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="radio1" name="customRadioInline1" class="custom-control-input" checked>
+                        <label class="custom-control-label" for="radio1">Choose by Country and/or Category</label>
+                      </div>
+                      </div>
+                      <div class= "col-xl-6">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="radio2" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="radio2">Choose by Sources</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6">
+                      <div><label class="mt-2" for="basic-url">Select Country</label></div>
+                      <select id="countrySelector" data-title="nothing selected"  data-live-search="true">
+                      </select>
+                      <div><label class="mt-2" for="basic-url">Select Category</label></div>
+                      <select id="categorySelector" data-title="nothing selected">
+                        <option value="general">General</option>
+                        <option value="business">Business</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="health"> Health</option>
+                        <option value="science">Science</option>
+                        <option value="sports"> Sports</option>
+                        <option value="technology">Technology</option>
+                      </select>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="container">
+                        <div class="row">
+                          <div><label class="mt-2" for="basic-url">Select Source</label></div>
+                        </div>
+                        <div class="row">
+                          <select id="sourcesSelector"  data-selected-Text-Format="count > 1"  disabled multiple>
+                          </select>
+                        </div>
+                      <div class="row"><label class="mt-2" for="basic-url">Select Language</label></div>
+                      <div class="row">
+                      <select id="languageSelector" disabled>
+                        <option value="all" >All  </option>
+                        <option value="ar">Arabic  </option>
+                        <option value="de">German   </option>
+                        <option value="en">English   </option>
+                        <option value="es">Spanish   </option>
+                        <option value="fr">French   </option>
+                        <option value="he">Hebrew   </option>
+                        <option value="it">Italian   </option>
+                        <option value="nl">Dutch   </option>
+                        <option value="no">Norwegian   </option>
+                        <option value="pt">Portuguese   </option>
+                        <option value="ru">Russian   </option>
+                        <option value="se">Northern Sami   </option>
+                        <option value="ud">Urdu   </option>
+                        <option value="zh">Chinese  </option>
+                      </select>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-xl-6">
+                    <div class="entriesCounter  mt-3">
+                      <label for="basic-url">Number of articles:</label>
+                      <input id="newsEntries" placeholder="Enter a number" value="10" required type="number"  min="1" max="30"/>
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="row justify-content-center">
+                    <div id="newsWrongInput1" class="mt-4 p-0 alert alert-danger d-none" style="max-width:max-content;"><span class="icon-warning"></span>&nbsp;You must choose a Country and/or Category</div>
+                    <div id="newsWrongInput2" class="mt-4 p-0 alert alert-danger d-none" style="max-width:max-content;"><span class="icon-warning"></span>&nbsp;You must choose a Source</div>
+                    <div id="newsWrongCounterInput" class="mt-4 p-0 alert alert-danger d-none" style="max-width:max-content;"><span class="icon-warning"></span>&nbsp;Please enter number for number of articles</div>
+                  </div> 
+                </div>
+              </div>
+              <div class="tab-pane fade" id="github" role="tabpanel">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Enter repository for specific notifications or leave blank for general notifications</label>
+                    <input  class="form-control" id="repository" placeholder="Enter repository url">
+                  </div>
+                </form>
+                <div id="githubWrongInput" class="mt-4 p-0 alert alert-danger d-none" style="max-width:max-content;"><span class="icon-warning"></span>&nbsp;Invalid Repository URL, it must be of a form like https://github.com/octocat/Spoon-Knife</div>
+              </div>
+              <div class="tab-pane fade" id="website" role="tabpanel">
+                <form>
+                  <div class="form-group mb-2">
+                    <label for="exampleInputEmail1">Enter URL of Website you want to open</label>
+                    <input class="form-control" id="website_url" placeholder="Enter Website URL">
+                    <div class="mt-4 p-0 alert alert-warning" style="max-width:max-content;"><span class="icon-warning"></span>&nbsp;Many Websites don't allow to be displayed this way!</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="Ok" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion"  id="container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

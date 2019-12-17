@@ -1,0 +1,9 @@
+node_modules/
+dist/
+package-lock.json
+server/.env
+.env
+js/Ablage.js
+devMobile/
+dev/
+.vscode/

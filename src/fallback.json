@@ -1,0 +1,14 @@
+
+{
+	"data" : 
+			{
+				"articles": [
+					{
+						"title": "No Internet and no content cached",
+						"url": "",
+						"urlToImage": "",
+						"description": "Load the page again when you're online"
+					}
+				]
+			}
+}

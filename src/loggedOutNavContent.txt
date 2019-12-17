@@ -1,0 +1,7 @@
+
+ <li class="nav-item">
+            <a href="register" class=" nav-link"><span class="icon-user"></span> Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a href="login" class=" nav-link"><span class="icon-enter"></span> Login</a>
+          </li>
